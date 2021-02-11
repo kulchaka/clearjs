@@ -11,6 +11,10 @@ const model = [
     type: "columns",
     value: ["111111", "222222", "333333", "444444"],
   },
+  {
+    type: "image",
+    value: "./img/javascript-illustration.png",
+  },
 ];
 
 const site = document.querySelector("#site");
@@ -24,6 +28,8 @@ model.forEach((block) => {
     html = text(block);
   } else if (block.type === "columns") {
     html = columns(block);
+  } else if (block.type === "image") {
+    html = image(block);
   }
 
   site.insertAdjacentHTML("beforeend", html);
@@ -58,5 +64,13 @@ function columns(block) {
     <div class="row">
       ${html.join("")}
     </div>
+  `;
+}
+
+function image(block) {
+  return `
+      <div class="row">
+        <img src="${block.value}" alt="javascript">
+      </div>
   `;
 }
