@@ -9,7 +9,7 @@ const model = [
   },
   {
     type: "columns",
-    value: ["111111", "222222", "333333"],
+    value: ["111111", "222222", "333333", "444444"],
   },
 ];
 
@@ -50,19 +50,13 @@ function text(block) {
 }
 
 function columns(block) {
-  let html = "";
-
-  for (const elem of block.value) {
-    html += `
-    <div class="col-sm">
-      ${elem}
-    </div>
-    `;
-  }
+  const html = block.value.map(
+    (element) => `<div class="col-sm">${element}</div>`
+  );
 
   return `
     <div class="row">
-      ${html}
+      ${html.join("")}
     </div>
   `;
 }
