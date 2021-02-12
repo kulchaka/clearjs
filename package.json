@@ -1,0 +1,30 @@
+{
+  "name": "js-constructor",
+  "version": "1.0.0",
+  "description": "javascript pure application",
+  "main": "src/script.js",
+  "scripts": {
+    "serve": "parcel ./src/index.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kulchaka/clearjs.git"
+  },
+  "keywords": [
+    "HTML",
+    "Bootstrap",
+    "CSS",
+    "GIT",
+    "ParcelJS",
+    "JavaScript"
+  ],
+  "author": "Andrii Kulchytskyi <kulchaka@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kulchaka/clearjs/issues"
+  },
+  "homepage": "https://github.com/kulchaka/clearjs#readme",
+  "devDependencies": {
+    "parcel-bundler": "^1.12.4"
+  }
+}
