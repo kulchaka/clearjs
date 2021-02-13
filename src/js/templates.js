@@ -17,18 +17,12 @@ function text(block) {
 }
 
 function columns(block) {
-  const html = block.value.map((element) => col(element));
+  const html = block.value.map(col);
 
   return row(html.join(""));
 }
 
 function image(block) {
-  // return `
-  //     <div class="row">
-  //       <img src="${block.value}" alt="javascript">
-  //     </div>
-  // `;
-
   return row(`<img src="${block.value}" alt="javascript">`);
 }
 
