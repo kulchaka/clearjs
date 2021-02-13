@@ -3,11 +3,16 @@ import image from "../img/javascript-illustration.png";
 export const model = [
   {
     type: "title",
-    value: "Hello world from JS",
+    value: "Contructor on Vanilla JS ",
     options: {
       tag: "h2",
-      styles:
-        "background-image: linear-gradient(to right, #f68e43 0%, #fbda03 100%); color: #4b4d65; text-align: center; padding: 1rem",
+      styles: {
+        background: "linear-gradient(to right, #f68e43 0%, #fbda03 100%)",
+        color: "#4b4d65",
+        "text-align": "center",
+        "text-shadow": "1px 1px 2px #383114",
+        padding: "1rem",
+      },
     },
   },
   {
