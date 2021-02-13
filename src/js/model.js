@@ -16,15 +16,42 @@ export const model = [
     },
   },
   {
-    type: "text",
-    value: "some text",
+    type: "image",
+    value: image,
+    options: {
+      styles: {
+        padding: "2rem 0",
+        display: "flex",
+        "justify-content": "center",
+        "clip-path": "inset(33px 30px 33px 30px round 15px)",
+      },
+    },
   },
   {
     type: "columns",
-    value: ["111111", "222222", "333333", "444444"],
+    value: [
+      "Pure JavaScript application, without any libraries",
+      "Learn how SOLID and OOP principles work in JavaScript",
+      "JavaScript is easy, interesting.",
+    ],
+    options: {
+      styles: {
+        background: "linear-gradient(to bottom, #8e2de2, #4a00e0)",
+        padding: "2rem",
+        color: "#fff",
+        "font-weight": "bold",
+      },
+    },
   },
   {
-    type: "image",
-    value: image,
+    type: "text",
+    value: "Andrii Kulchytskyi - kulchaka@gmail.com",
+    options: {
+      styles: {
+        background: "linear-gradient(to left, #f2994a, #f2c94c)",
+        padding: "1rem",
+        "font-weight": "bold",
+      },
+    },
   },
 ];
