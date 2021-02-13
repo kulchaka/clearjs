@@ -1,9 +1,11 @@
 import { model } from "./model";
+import { Site } from "./classes/Site";
 import "../styles/style.css";
+import { Sidebar } from "./classes/Sidebar";
 
-const site = document.querySelector("#site");
+const site = new Site("#site");
 
-model.forEach((block) => {
-  console.log(block.toHTML());
-  site.insertAdjacentHTML("beforeend", block.toHTML());
-});
+const sidebar = new Sidebar("#panel");
+
+site.render(model);
+sidebar.render();
