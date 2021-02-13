@@ -11,7 +11,6 @@ function text(block) {
 
 function columns(block) {
   const html = block.value.map(col);
-
   return row(html.join(""), css(block.options.styles));
 }
 
