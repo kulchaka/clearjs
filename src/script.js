@@ -1,21 +1,6 @@
-const model = [
-  {
-    type: "title",
-    value: "Hello world from JS",
-  },
-  {
-    type: "text",
-    value: "some text",
-  },
-  {
-    type: "columns",
-    value: ["111111", "222222", "333333", "444444"],
-  },
-  {
-    type: "image",
-    value: "./img/javascript-illustration.png",
-  },
-];
+import { model } from "./model";
+import { title, text, columns, image } from "./templates";
+import "./styles/style.css";
 
 const site = document.querySelector("#site");
 
@@ -34,43 +19,3 @@ model.forEach((block) => {
 
   site.insertAdjacentHTML("beforeend", html);
 });
-
-function title(block) {
-  return `
-      <div class="row">
-        <div class="col-sm">
-          <h1>${block.value}</h1>
-        </div>
-      </div>
-  `;
-}
-
-function text(block) {
-  return `
-      <div class="row">
-        <div class="col-sm">
-          <p>${block.value}</p>
-        </div>
-      </div>
-  `;
-}
-
-function columns(block) {
-  const html = block.value.map(
-    (element) => `<div class="col-sm">${element}</div>`
-  );
-
-  return `
-    <div class="row">
-      ${html.join("")}
-    </div>
-  `;
-}
-
-function image(block) {
-  return `
-      <div class="row">
-        <img src="${block.value}" alt="javascript">
-      </div>
-  `;
-}
