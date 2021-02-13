@@ -1,8 +1,13 @@
 import image from "../img/javascript-illustration.png";
-import { Block } from "./classes/blocks";
+import {
+  TitleBlock,
+  ImageBlock,
+  ColumnsBlock,
+  TextBlock,
+} from "./classes/Blocks";
 
 export const model = [
-  new Block("title", "Contructor on Vanilla JS", {
+  new TitleBlock("Contructor on Vanilla JS", {
     tag: "h2",
     styles: {
       background: "linear-gradient(to right, #f68e43 0%, #fbda03 100%)",
@@ -13,7 +18,7 @@ export const model = [
     },
   }),
 
-  new Block("image", image, {
+  new ImageBlock(image, {
     styles: {
       padding: "2rem 0",
       display: "flex",
@@ -26,8 +31,7 @@ export const model = [
     alt: "javascript image",
   }),
 
-  new Block(
-    "columns",
+  new ColumnsBlock(
     [
       "Pure JavaScript application, without any libraries",
       "Learn how SOLID and OOP principles work in JavaScript",
@@ -43,7 +47,7 @@ export const model = [
     }
   ),
 
-  new Block("text", "Andrii Kulchytskyi - kulchaka@gmail.com", {
+  new TextBlock("Andrii Kulchytskyi - kulchaka@gmail.com", {
     styles: {
       background: "linear-gradient(to left, #f2994a, #f2c94c)",
       padding: "1rem",
