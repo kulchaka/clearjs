@@ -5,33 +5,31 @@ function title(block) {
 }
 
 function text(block) {
-  return `
-      <div class="row">
-        <div class="col-sm">
-          <p>${block.value}</p>
-        </div>
-      </div>
-  `;
+  // return `
+  //     <div class="row">
+  //       <div class="col-sm">
+  //         <p>${block.value}</p>
+  //       </div>
+  //     </div>
+  // `;
+
+  return row(col(`<p>${block.value}</p>`));
 }
 
 function columns(block) {
-  const html = block.value.map(
-    (element) => `<div class="col-sm">${element}</div>`
-  );
+  const html = block.value.map((element) => col(element));
 
-  return `
-    <div class="row">
-      ${html.join("")}
-    </div>
-  `;
+  return row(html.join(""));
 }
 
 function image(block) {
-  return `
-      <div class="row">
-        <img src="${block.value}" alt="javascript">
-      </div>
-  `;
+  // return `
+  //     <div class="row">
+  //       <img src="${block.value}" alt="javascript">
+  //     </div>
+  // `;
+
+  return row(`<img src="${block.value}" alt="javascript">`);
 }
 
 export const templates = { title, text, columns, image };
