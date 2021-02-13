@@ -1,3 +1,5 @@
+import image from "../img/javascript-illustration.png";
+
 export const model = [
   {
     type: "title",
@@ -13,6 +15,6 @@ export const model = [
   },
   {
     type: "image",
-    value: "/img/javascript-illustration.png",
+    value: image,
   },
 ];
