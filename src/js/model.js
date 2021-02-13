@@ -23,8 +23,12 @@ export const model = [
         padding: "2rem 0",
         display: "flex",
         "justify-content": "center",
-        "clip-path": "inset(33px 30px 33px 30px round 15px)",
       },
+      imageStyles: {
+        width: "500px",
+        height: "auto",
+      },
+      alt: "javascript image",
     },
   },
   {

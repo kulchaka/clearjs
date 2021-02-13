@@ -17,9 +17,10 @@ function columns(block) {
 }
 
 function image(block) {
+  const { imageStyles, alt = "", styles } = block.options;
   return row(
-    `<img src="${block.value}" alt="javascript">`,
-    css(block.options.styles)
+    `<img src="${block.value}" style="${css(imageStyles)}" alt="${alt}">`,
+    css(styles)
   );
 }
 
